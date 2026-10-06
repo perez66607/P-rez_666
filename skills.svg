@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Nivel de habilidades">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a371f7"/>
+    </linearGradient>
+    <style>
+      text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+      .label { font-size: 14px; fill: #c9d1d9; }
+      .pct { font-size: 13px; fill: #8b949e; }
+      .track { fill: #21262d; }
+      .fill { fill: url(#bar); transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: grow 1.4s cubic-bezier(.2,.8,.2,1) forwards; }
+      @keyframes grow { to { transform: scaleX(1) } }
+      .t { font-size: 12px; fill: #58a6ff; letter-spacing: 2px; }
+    </style>
+  </defs>
+  <rect width="900" height="300" rx="14" fill="#0d1117" stroke="#30363d"/>
+
+  <text x="40" y="38" class="t">FRONTEND</text>
+  <text x="480" y="38" class="t">LÓGICA &amp; AUTOMATIZACIÓN</text>
+
+  <!-- Left column -->
+  <text x="40" y="76" class="label">HTML5 semántico</text><text x="400" y="76" class="pct" text-anchor="end">90%</text>
+  <rect x="40" y="86" width="360" height="8" rx="4" class="track"/>
+  <rect x="40" y="86" width="324" height="8" rx="4" class="fill" style="animation-delay:.1s"/>
+
+  <text x="40" y="132" class="label">CSS3 / Grid / Flexbox</text><text x="400" y="132" class="pct" text-anchor="end">88%</text>
+  <rect x="40" y="142" width="360" height="8" rx="4" class="track"/>
+  <rect x="40" y="142" width="317" height="8" rx="4" class="fill" style="animation-delay:.25s"/>
+
+  <text x="40" y="188" class="label">Diseño responsive</text><text x="400" y="188" class="pct" text-anchor="end">90%</text>
+  <rect x="40" y="198" width="360" height="8" rx="4" class="track"/>
+  <rect x="40" y="198" width="324" height="8" rx="4" class="fill" style="animation-delay:.4s"/>
+
+  <text x="40" y="244" class="label">Rendimiento web</text><text x="400" y="244" class="pct" text-anchor="end">78%</text>
+  <rect x="40" y="254" width="360" height="8" rx="4" class="track"/>
+  <rect x="40" y="254" width="281" height="8" rx="4" class="fill" style="animation-delay:.55s"/>
+
+  <!-- Right column -->
+  <text x="480" y="76" class="label">JavaScript</text><text x="860" y="76" class="pct" text-anchor="end">80%</text>
+  <rect x="480" y="86" width="380" height="8" rx="4" class="track"/>
+  <rect x="480" y="86" width="304" height="8" rx="4" class="fill" style="animation-delay:.2s"/>
+
+  <text x="480" y="132" class="label">Python</text><text x="860" y="132" class="pct" text-anchor="end">75%</text>
+  <rect x="480" y="142" width="380" height="8" rx="4" class="track"/>
+  <rect x="480" y="142" width="285" height="8" rx="4" class="fill" style="animation-delay:.35s"/>
+
+  <text x="480" y="188" class="label">Git &amp; GitHub</text><text x="860" y="188" class="pct" text-anchor="end">82%</text>
+  <rect x="480" y="198" width="380" height="8" rx="4" class="track"/>
+  <rect x="480" y="198" width="312" height="8" rx="4" class="fill" style="animation-delay:.5s"/>
+
+  <text x="480" y="244" class="label">CI/CD · GitHub Actions</text><text x="860" y="244" class="pct" text-anchor="end">70%</text>
+  <rect x="480" y="254" width="380" height="8" rx="4" class="track"/>
+  <rect x="480" y="254" width="266" height="8" rx="4" class="fill" style="animation-delay:.65s"/>
+</svg>
