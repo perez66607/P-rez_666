@@ -82,6 +82,10 @@ Creo que un buen proyecto web se reconoce por tres cosas: **carga rápido**, **s
 ## ⚡ Habilidades
 
 <p align="center">
+  <img src="./skills.svg" width="860" alt="Nivel de habilidades" />
+</p>
+
+<p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,py,git,github,githubactions,vscode&perline=8&theme=dark" alt="Stack" />
 </p>
 
@@ -180,14 +184,6 @@ flowchart LR
   <img src="https://streak-stats.demolab.com/?user=perez66607&theme=tokyonight&hide_border=true&background=0d1117&ring=a371f7&fire=58a6ff&currStreakLabel=58a6ff" alt="Streak" />
 </p>
 
-<details>
-  <summary><b>📈 Ver gráfico de contribuciones</b></summary>
-  <br>
-  <p align="center">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=perez66607&bg_color=0d1117&color=58a6ff&line=a371f7&point=ffffff&area=true&area_color=58a6ff&hide_border=true" alt="Activity graph" width="95%" />
-  </p>
-</details>
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/perez66607/perez66607/output/github-snake-dark.svg" />
@@ -203,7 +199,8 @@ flowchart LR
 ¿Tienes una idea, una web que mejorar o algo que automatizar? Escríbeme.
 
 <p align="center">
-  <a href="mailto:joseantonioperez20072007@gmail.com">
+  <!-- Pon aquí el email que quieras hacer público (los perfiles de GitHub lo ve todo el mundo) -->
+  <a href="mailto:TU_EMAIL@ejemplo.com">
     <img src="https://img.shields.io/badge/Email-Escr%C3%ADbeme-58a6ff?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email" />
   </a>
   <a href="https://github.com/perez66607">
