@@ -11,13 +11,14 @@ def create_terminal():
         "       BB     WW  WW   WW  WW   WW  WW      BB       ",
         "       BB      WWWWW    WWWWW    WWWWW      BB       ",
         "       BB                                   BB       ",
+        "       BB                                   BB       ",
         "        BB                                 BB        ",
         "         BB                               BB         "
     ]
     
     pixel_size = 5
     start_x = 35
-    start_y = 85
+    start_y = 55
     pixels_svg = ""
     
     for row_idx, row in enumerate(art_grid):
@@ -29,7 +30,7 @@ def create_terminal():
             elif char == 'W':
                 pixels_svg += f'<rect x="{x}" y="{y}" width="{pixel_size+.5}" height="{pixel_size+.5}" fill="#ff7b72" rx="1"/>\n'
 
-    svg = f"""<svg width="860" height="340" viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg">
+    svg = f"""<svg width="860" height="320" viewBox="0 0 860 320" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#0d1117"/>
@@ -42,39 +43,9 @@ def create_terminal():
             .dot-yellow {{ fill: #ffbd2e; }}
             .dot-green {{ fill: #27c93f; }}
             
-            .text {{ font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14px; fill: #c9d1d9; }}
+            .text {{ font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 13.5px; fill: #c9d1d9; }}
             .key {{ fill: #79c0ff; font-weight: bold; }}
             .val {{ fill: #8b949e; }}
-            
-            .typing-container {{
-                overflow: hidden;
-                white-space: nowrap;
-                border-right: 2px solid #c9d1d9;
-                width: 0;
-                animation: typing 1.2s steps(30, end) forwards, blink 0.8s step-end infinite;
-            }}
-            .fade {{ opacity: 0; animation: fadeIn 0.4s ease-in forwards; }}
-            .f-1 {{ animation-delay: 1.1s; }}
-            .f-2 {{ animation-delay: 1.3s; }}
-            .f-3 {{ animation-delay: 1.5s; }}
-            .f-4 {{ animation-delay: 1.7s; }}
-            .f-5 {{ animation-delay: 1.9s; }}
-            .f-6 {{ animation-delay: 2.1s; }}
-            .f-7 {{ animation-delay: 2.3s; }}
-            .f-8 {{ animation-delay: 2.5s; }}
-            
-            @keyframes typing {{
-                from {{ width: 0; }}
-                to {{ width: 300px; }}
-            }}
-            @keyframes blink {{
-                from, to {{ border-color: transparent; }}
-                50% {{ border-color: #c9d1d9; }}
-            }}
-            @keyframes fadeIn {{
-                from {{ opacity: 0; transform: translateY(4px); }}
-                to {{ opacity: 1; transform: translateY(0); }}
-            }}
             
             .progress-bg {{ fill: #21262d; rx: 3px; }}
             .progress-bar {{ rx: 3px; }}
@@ -89,41 +60,36 @@ def create_terminal():
     <text x="430" y="20" font-family="sans-serif" font-size="12px" fill="#8b949e" text-anchor="middle">perez66607@github: ~ (zsh)</text>
 
     <!-- Logo 666 Pixel Art -->
-    <g class="fade" style="animation-delay: 0.3s;">
+    <g>
         {pixels_svg}
     </g>
 
-    <!-- Bloque de texto con líneas totalmente separadas y seguras -->
-    <g class="text" transform="translate(295, 65)">
-        <foreignObject x="0" y="0" width="450" height="25">
-            <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14px;">
-                <span style="color: #3fb950; font-weight: bold;">perez66607@github</span>:<span style="color: #58a6ff; font-weight: bold;">~</span>$ <span style="color: #f0f6fc; font-weight: bold;">./web_dev.sh</span>
-            </div>
-        </foreignObject>
+    <!-- Bloque de texto y barras limpio y estático sin solapamientos -->
+    <g class="text" transform="translate(290, 45)">
+        <text x="0" y="20"><tspan style="color: #3fb950; font-weight: bold;">perez66607@github</tspan>:<tspan style="color: #58a6ff; font-weight: bold;">~</tspan>$ <tspan style="color: #f0f6fc; font-weight: bold;">./web_dev.sh</tspan></text>
         
-        <text x="0" y="45" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
-        <text x="0" y="75" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
-        <text x="0" y="105" class="fade f-3"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
-        <text x="0" y="135" class="fade f-4"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
+        <text x="0" y="50"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
+        <text x="0" y="75"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
+        <text x="0" y="100"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
+        <text x="0" y="125"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
         
-        <text x="0" y="175" class="fade f-5" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
+        <text x="0" y="160" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
         
-        <!-- Barras de progreso separadas y abajo del todo -->
-        <text x="0" y="205" class="fade f-6" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
-        <rect x="120" y="195" width="160" height="9" class="progress-bg fade f-6" />
-        <rect x="120" y="195" width="145" height="9" class="progress-bar fade f-6" fill="#00a8ff" />
+        <text x="0" y="185" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
+        <rect x="120" y="176" width="160" height="8" class="progress-bg" />
+        <rect x="120" y="176" width="145" height="8" class="progress-bar" fill="#00a8ff" />
         
-        <text x="0" y="230" class="fade f-7" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
-        <rect x="120" y="220" width="160" height="9" class="progress-bg fade f-7" />
-        <rect x="120" y="220" width="130" height="9" class="progress-bar fade f-7" fill="#ffa657" />
+        <text x="0" y="210" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
+        <rect x="120" y="201" width="160" height="8" class="progress-bg" />
+        <rect x="120" y="201" width="130" height="8" class="progress-bar" fill="#ffa657" />
         
-        <text x="0" y="255" class="fade f-8" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
-        <rect x="120" y="245" width="160" height="9" class="progress-bg fade f-8" />
-        <rect x="120" y="245" width="115" height="9" class="progress-bar fade f-8" fill="#3fb950" />
+        <text x="0" y="235" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
+        <rect x="120" y="226" width="160" height="8" class="progress-bg" />
+        <rect x="120" y="226" width="115" height="8" class="progress-bar" fill="#3fb950" />
     </g>
     </svg>"""
 
-    with open("terminal.svg", "w", encoding="utf-8") as f:
+    with open("terminal-v2.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
 if __name__ == "__main__":
