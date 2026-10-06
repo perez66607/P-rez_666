@@ -23,16 +23,18 @@
                 animation: typing 1.2s steps(30, end) forwards, blink 0.8s step-end infinite;
             }
             .fade { opacity: 0; animation: fadeIn 0.4s ease-in forwards; }
-            .f-1 { animation-delay: 1.2s; }
-            .f-2 { animation-delay: 1.4s; }
-            .f-3 { animation-delay: 1.6s; }
-            .f-4 { animation-delay: 1.8s; }
-            .f-5 { animation-delay: 2.0s; }
-            .f-6 { animation-delay: 2.2s; }
+            .f-1 { animation-delay: 1.1s; }
+            .f-2 { animation-delay: 1.3s; }
+            .f-3 { animation-delay: 1.5s; }
+            .f-4 { animation-delay: 1.7s; }
+            .f-5 { animation-delay: 1.9s; }
+            .f-6 { animation-delay: 2.1s; }
+            .f-7 { animation-delay: 2.3s; }
+            .f-8 { animation-delay: 2.5s; }
             
             @keyframes typing {
                 from { width: 0; }
-                to { width: 320px; }
+                to { width: 300px; }
             }
             @keyframes blink {
                 from, to { border-color: transparent; }
@@ -56,7 +58,7 @@
     <text x="430" y="20" font-family="sans-serif" font-size="12px" fill="#8b949e" text-anchor="middle">perez66607@github: ~ (zsh)</text>
 
     <!-- Logo 666 Pixel Art -->
-    <g class="fade" style="animation-delay: 0.4s;">
+    <g class="fade" style="animation-delay: 0.3s;">
         <rect x="80" y="85" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="85" y="85" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="245" y="85" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
@@ -190,7 +192,7 @@
 
     </g>
 
-    <!-- Consola con espaciado vertical perfecto -->
+    <!-- Bloque de texto con líneas totalmente separadas y seguras -->
     <g class="text" transform="translate(295, 65)">
         <foreignObject x="0" y="0" width="450" height="25">
             <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14px;">
@@ -198,25 +200,24 @@
             </div>
         </foreignObject>
         
-        <text x="0" y="40" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
-        <text x="0" y="68" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
-        <text x="0" y="96" class="fade f-3"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
-        <text x="0" y="124" class="fade f-4"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
+        <text x="0" y="45" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
+        <text x="0" y="75" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
+        <text x="0" y="105" class="fade f-3"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
+        <text x="0" y="135" class="fade f-4"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
         
-        <text x="0" y="156" class="fade f-5" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
+        <text x="0" y="175" class="fade f-5" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
         
-        <g class="fade f-6" transform="translate(0, 170)">
-            <text x="0" y="12" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
-            <rect x="120" y="3" width="160" height="9" class="progress-bg" />
-            <rect x="120" y="3" width="145" height="9" class="progress-bar" fill="#00a8ff" />
-            
-            <text x="0" y="34" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
-            <rect x="120" y="25" width="160" height="9" class="progress-bg" />
-            <rect x="120" y="25" width="130" height="9" class="progress-bar" fill="#ffa657" />
-            
-            <text x="0" y="56" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
-            <rect x="120" y="47" width="160" height="9" class="progress-bg" />
-            <rect x="120" y="47" width="115" height="9" class="progress-bar" fill="#3fb950" />
-        </g>
+        <!-- Barras de progreso separadas y abajo del todo -->
+        <text x="0" y="205" class="fade f-6" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
+        <rect x="120" y="195" width="160" height="9" class="progress-bg fade f-6" />
+        <rect x="120" y="195" width="145" height="9" class="progress-bar fade f-6" fill="#00a8ff" />
+        
+        <text x="0" y="230" class="fade f-7" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
+        <rect x="120" y="220" width="160" height="9" class="progress-bg fade f-7" />
+        <rect x="120" y="220" width="130" height="9" class="progress-bar fade f-7" fill="#ffa657" />
+        
+        <text x="0" y="255" class="fade f-8" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
+        <rect x="120" y="245" width="160" height="9" class="progress-bg fade f-8" />
+        <rect x="120" y="245" width="115" height="9" class="progress-bar fade f-8" fill="#3fb950" />
     </g>
     </svg>
