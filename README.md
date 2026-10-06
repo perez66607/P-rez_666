@@ -1,12 +1,5 @@
 <div align="center">
-  <h3><code>perez66607@github ~ $ ./contributions.sh</code></h3>
   <img src="./contrib-heatmap.svg" width="860" />
   <br><br>
-  <h3><code>perez66607@github ~ $ whoami</code></h3>
-  <table>
-    <tr>
-      <td valign="top"><img src="./avi-ascii.svg?v=1" width="370" /></td>
-      <td valign="top"><img src="./info-card.svg?v=1" width="490" /></td>
-    </tr>
-  </table>
+  <img src="./terminal.svg" width="860" />
 </div>
