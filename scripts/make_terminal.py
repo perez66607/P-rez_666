@@ -54,12 +54,12 @@ def create_terminal():
                 animation: typing 1.2s steps(30, end) forwards, blink 0.8s step-end infinite;
             }}
             .fade {{ opacity: 0; animation: fadeIn 0.4s ease-in forwards; }}
-            .f-1 {{ animation-delay: 1.3s; }}
-            .f-2 {{ animation-delay: 1.5s; }}
-            .f-3 {{ animation-delay: 1.7s; }}
-            .f-4 {{ animation-delay: 1.9s; }}
-            .f-5 {{ animation-delay: 2.1s; }}
-            .f-6 {{ animation-delay: 2.3s; }}
+            .f-1 {{ animation-delay: 1.2s; }}
+            .f-2 {{ animation-delay: 1.4s; }}
+            .f-3 {{ animation-delay: 1.6s; }}
+            .f-4 {{ animation-delay: 1.8s; }}
+            .f-5 {{ animation-delay: 2.0s; }}
+            .f-6 {{ animation-delay: 2.2s; }}
             
             @keyframes typing {{
                 from {{ width: 0; }}
@@ -91,33 +91,33 @@ def create_terminal():
         {pixels_svg}
     </g>
 
-    <!-- Consola centrada en desarrollo web -->
-    <g class="text" transform="translate(295, 75)">
+    <!-- Consola con espaciado vertical perfecto -->
+    <g class="text" transform="translate(295, 65)">
         <foreignObject x="0" y="0" width="450" height="25">
             <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14px;">
                 <span style="color: #3fb950; font-weight: bold;">perez66607@github</span>:<span style="color: #58a6ff; font-weight: bold;">~</span>$ <span style="color: #f0f6fc; font-weight: bold;">./web_dev.sh</span>
             </div>
         </foreignObject>
         
-        <text x="0" y="45" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
-        <text x="0" y="70" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
-        <text x="0" y="95" class="fade f-3"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
-        <text x="0" y="120" class="fade f-4"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
+        <text x="0" y="40" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Web Developer &amp; UI Designer</tspan></text>
+        <text x="0" y="68" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
+        <text x="0" y="96" class="fade f-3"><tspan class="key">Focus</tspan>      <tspan class="val">~ Interactive Web Apps &amp; Clicker Games</tspan></text>
+        <text x="0" y="124" class="fade f-4"><tspan class="key">Tools</tspan>      <tspan class="val">~ HTML, CSS, JavaScript, VS Code</tspan></text>
         
-        <text x="0" y="155" class="fade f-5" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
+        <text x="0" y="156" class="fade f-5" fill="#58a6ff" font-weight="bold">Tech Stack &amp; Skills</text>
         
         <g class="fade f-6" transform="translate(0, 170)">
-            <text x="0" y="10" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
-            <rect x="110" y="1" width="160" height="9" class="progress-bg" />
-            <rect x="110" y="1" width="145" height="9" class="progress-bar" fill="#00a8ff" />
+            <text x="0" y="12" font-size="12px" fill="#c9d1d9">HTML / CSS / UI</text>
+            <rect x="120" y="3" width="160" height="9" class="progress-bg" />
+            <rect x="120" y="3" width="145" height="9" class="progress-bar" fill="#00a8ff" />
             
-            <text x="0" y="30" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
-            <rect x="110" y="21" width="160" height="9" class="progress-bg" />
-            <rect x="110" y="21" width="130" height="9" class="progress-bar" fill="#ffa657" />
+            <text x="0" y="34" font-size="12px" fill="#c9d1d9">JavaScript / Web</text>
+            <rect x="120" y="25" width="160" height="9" class="progress-bg" />
+            <rect x="120" y="25" width="130" height="9" class="progress-bar" fill="#ffa657" />
             
-            <text x="0" y="50" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
-            <rect x="110" y="41" width="160" height="9" class="progress-bg" />
-            <rect x="110" y="41" width="115" height="9" class="progress-bar" fill="#3fb950" />
+            <text x="0" y="56" font-size="12px" fill="#c9d1d9">Python / Scripts</text>
+            <rect x="120" y="47" width="160" height="9" class="progress-bg" />
+            <rect x="120" y="47" width="115" height="9" class="progress-bar" fill="#3fb950" />
         </g>
     </g>
     </svg>"""
