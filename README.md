@@ -82,10 +82,6 @@ Creo que un buen proyecto web se reconoce por tres cosas: **carga rápido**, **s
 ## ⚡ Habilidades
 
 <p align="center">
-  <img src="./skills.svg" width="860" alt="Nivel de habilidades" />
-</p>
-
-<p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,py,git,github,githubactions,vscode&perline=8&theme=dark" alt="Stack" />
 </p>
 
