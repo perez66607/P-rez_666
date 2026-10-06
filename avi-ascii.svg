@@ -1,0 +1,17 @@
+<svg width="370" height="250" viewBox="0 0 370 250" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .brace { fill: #00a8ff; font-weight: bold; }
+        .face { fill: #c9d1d9; }
+    </style>
+    <rect width="100%" height="100%" fill="#0d1117" rx="6" />
+    <text x="50%" y="35%" dominant-baseline="middle" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="14px" font-weight="bold">
+        <tspan x="50%" dy="0"><tspan class="brace">{ </tspan><tspan class="face">   ▄▄▄▄▄▄▄   </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">  █████████  </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">  █       █▄ </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">  █ ▀▀ ▀▀ █  </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">  ▄   ▄   ▄  </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">   █ ▀▀▀ █   </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">   ██▄▄▄██   </tspan><tspan class="brace"> }</tspan></tspan>
+        <tspan x="50%" dy="1.2em"><tspan class="brace">{ </tspan><tspan class="face">    ▀███▀    </tspan><tspan class="brace"> }</tspan></tspan>
+    </text>
+</svg>
