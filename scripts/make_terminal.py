@@ -1,55 +1,134 @@
 def create_terminal():
-    svg = """<svg width="860" height="280" viewBox="0 0 860 280" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }
-        .topbar { fill: #161b22; }
-        .dot-red { fill: #ff5f56; }
-        .dot-yellow { fill: #ffbd2e; }
-        .dot-green { fill: #27c93f; }
-        .text { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14px; fill: #c9d1d9; }
-        .prompt { fill: #3fb950; font-weight: bold; }
-        .dir { fill: #58a6ff; font-weight: bold; }
-        .cmd { fill: #f0f6fc; }
-        .key { fill: #79c0ff; font-weight: bold; }
-        .val { fill: #8b949e; }
-        .ascii { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14px; fill: #58a6ff; white-space: pre; font-weight: bold; }
-    </style>
+    # Matriz con los tres "666" enmarcados por los corchetes azules (B) y texto brillante (W)
+    art_grid = [
+        "         BB                               BB         ",
+        "        BB                                 BB        ",
+        "       BB                                   BB       ",
+        "       BB      WWWW     WWWW     WWWW       BB       ",
+        "       BB     WW       WW       WW          BB       ",
+        "       BB     WW       WW       WW          BB       ",
+        "       BB     WWWWW    WWWWW    WWWWW       BB       ",
+        "       BB     WW  WW   WW  WW   WW  WW      BB       ",
+        "       BB     WW  WW   WW  WW   WW  WW      BB       ",
+        "       BB      WWWWW    WWWWW    WWWWW      BB       ",
+        "       BB                                   BB       ",
+        "       BB                                   BB       ",
+        "        BB                                 BB        ",
+        "         BB                               BB         "
+    ]
     
-    <rect width="100%" height="100%" class="bg" />
+    pixel_size = 5
+    start_x = 35
+    start_y = 85
+    pixels_svg = ""
+    
+    for row_idx, row in enumerate(art_grid):
+        for col_idx, char in enumerate(row):
+            x = start_x + (col_idx * pixel_size)
+            y = start_y + (row_idx * pixel_size)
+            if char == 'B':
+                pixels_svg += f'<rect x="{x}" y="{y}" width="{pixel_size+.5}" height="{pixel_size+.5}" fill="#00a8ff" rx="1"/>\n'
+            elif char == 'W':
+                pixels_svg += f'<rect x="{x}" y="{y}" width="{pixel_size+.5}" height="{pixel_size+.5}" fill="#ff7b72" rx="1"/>\n'
+
+    svg = f"""<svg width="860" height="340" viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0d1117"/>
+            <stop offset="100%" stop-color="#161b22"/>
+        </linearGradient>
+        <style>
+            .window {{ fill: url(#bg); stroke: #30363d; stroke-width: 1px; rx: 8px; }}
+            .topbar {{ fill: #010409; }}
+            .dot-red {{ fill: #ff5f56; }}
+            .dot-yellow {{ fill: #ffbd2e; }}
+            .dot-green {{ fill: #27c93f; }}
+            
+            .text {{ font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14.5px; fill: #c9d1d9; }}
+            .prompt {{ fill: #3fb950; font-weight: bold; }}
+            .dir {{ fill: #58a6ff; font-weight: bold; }}
+            .cmd {{ fill: #f0f6fc; font-weight: bold; }}
+            
+            .key {{ fill: #79c0ff; font-weight: bold; }}
+            .val {{ fill: #8b949e; }}
+            
+            .typing-container {{
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 2px solid #c9d1d9;
+                width: 0;
+                animation: typing 1.2s steps(30, end) forwards, blink 0.8s step-end infinite;
+            }}
+            .fade {{ opacity: 0; animation: fadeIn 0.4s ease-in forwards; }}
+            .f-1 {{ animation-delay: 1.4s; }}
+            .f-2 {{ animation-delay: 1.6s; }}
+            .f-3 {{ animation-delay: 1.8s; }}
+            .f-4 {{ animation-delay: 2.0s; }}
+            .f-5 {{ animation-delay: 2.2s; }}
+            .f-6 {{ animation-delay: 2.4s; }}
+            
+            @keyframes typing {{
+                from {{ width: 0; }}
+                to {{ width: 330px; }}
+            }}
+            @keyframes blink {{
+                from, to {{ border-color: transparent; }}
+                50% {{ border-color: #c9d1d9; }}
+            }}
+            @keyframes fadeIn {{
+                from {{ opacity: 0; transform: translateY(5px); }}
+                to {{ opacity: 1; transform: translateY(0); }}
+            }}
+            
+            .progress-bg {{ fill: #21262d; rx: 3px; }}
+            .progress-bar {{ rx: 3px; }}
+        </style>
+    </defs>
+
+    <rect width="100%" height="100%" class="window" />
     <path d="M 0 8 Q 0 0 8 0 L 852 0 Q 860 0 860 8 L 860 30 L 0 30 Z" class="topbar" />
     <circle cx="20" cy="15" r="6" class="dot-red" />
     <circle cx="40" cy="15" r="6" class="dot-yellow" />
     <circle cx="60" cy="15" r="6" class="dot-green" />
-    <text x="430" y="20" font-family="sans-serif" font-size="12px" fill="#8b949e" text-anchor="middle">perez66607@github: ~</text>
+    <text x="430" y="20" font-family="sans-serif" font-size="12px" fill="#8b949e" text-anchor="middle">perez66607@github: ~ (zsh)</text>
 
-    <!-- ASCII Segura -->
-    <text x="40" y="60" class="ascii">
-        <tspan x="40" dy="0">   .-----------------.   </tspan>
-        <tspan x="40" dy="18">  | .---------------. |  </tspan>
-        <tspan x="40" dy="18">  | |   _______     | |  </tspan>
-        <tspan x="40" dy="18">  | |  |  ___  |    | |  </tspan>
-        <tspan x="40" dy="18">  | |  | |___| |    | |  </tspan>
-        <tspan x="40" dy="18">  | |  |  _____|    | |  </tspan>
-        <tspan x="40" dy="18">  | |  | |          | |  </tspan>
-        <tspan x="40" dy="18">  | |  |_|          | |  </tspan>
-        <tspan x="40" dy="18">  | '---------------' |  </tspan>
-        <tspan x="40" dy="18">   '-----------------'   </tspan>
-    </text>
+    <!-- Tres 666 Pixel Art Vectorial -->
+    <g class="fade" style="animation-delay: 0.5s;">
+        {pixels_svg}
+    </g>
 
-    <!-- Datos Neofetch -->
-    <text x="280" y="70" class="text">
-        <tspan x="280" dy="0"><tspan class="prompt">perez66607@github</tspan>:<tspan class="dir">~</tspan>$ <tspan class="cmd">neofetch</tspan></tspan>
-        <tspan x="280" dy="28"><tspan class="key">Role</tspan>       <tspan class="val">~ Developer &amp; Minecraft Architect</tspan></tspan>
-        <tspan x="280" dy="24"><tspan class="key">Base</tspan>       <tspan class="val">~ El Ejido, Andalusia</tspan></tspan>
-        <tspan x="280" dy="24"><tspan class="key">Stack</tspan>      <tspan class="val">~ HTML, CSS, Python, VS Code</tspan></tspan>
-        <tspan x="280" dy="24"><tspan class="key">Gaming</tspan>     <tspan class="val">~ Minecraft 1.20.1 (Forge, Create, CTOV)</tspan></tspan>
-        <tspan x="280" dy="24"><tspan class="key">Projects</tspan>   <tspan class="val">~ Web-based Idle Clicker Games</tspan></tspan>
+    <!-- Consola animada -->
+    <g class="text" transform="translate(300, 85)">
+        <foreignObject x="0" y="-12" width="400" height="30">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14.5px;">
+                <span style="color: #3fb950; font-weight: bold;">perez66607@github</span>:<span style="color: #58a6ff; font-weight: bold;">~</span>$ <span style="color: #f0f6fc; font-weight: bold;">./fetch_profile.sh</span>
+            </div>
+        </foreignObject>
         
-        <tspan x="280" dy="35">
-            <tspan fill="#ff7b72">███</tspan> <tspan fill="#ffa657">███</tspan> <tspan fill="#3fb950">███</tspan> <tspan fill="#a5d6ff">███</tspan> <tspan fill="#79c0ff">███</tspan> <tspan fill="#d2a8ff">███</tspan>
-        </tspan>
-    </text>
+        <text x="0" y="35" class="fade f-1"><tspan class="key">Role</tspan>       <tspan class="val">~ Developer &amp; Minecraft Architect</tspan></text>
+        <text x="0" y="65" class="fade f-2"><tspan class="key">Location</tspan>   <tspan class="val">~ El Ejido, Andalusia</tspan></text>
+        <text x="0" y="95" class="fade f-3"><tspan class="key">Gaming</tspan>     <tspan class="val">~ Minecraft 1.20.1 (Forge, Create, CTOV)</tspan></text>
+        <text x="0" y="125" class="fade f-4"><tspan class="key">Projects</tspan>   <tspan class="val">~ Web-based Idle Clicker Games</tspan></text>
+        
+        <text x="0" y="165" class="fade f-5"><tspan class="key">Tech Stack</tspan></text>
+        
+        <g class="fade f-6" transform="translate(0, 180)">
+            <text x="0" y="10" font-size="12px" fill="#c9d1d9">Python</text>
+            <rect x="70" y="1" width="150" height="10" class="progress-bg" />
+            <rect x="70" y="1" width="130" height="10" class="progress-bar" fill="#3fb950" />
+            
+            <text x="0" y="30" font-size="12px" fill="#c9d1d9">HTML/CSS</text>
+            <rect x="70" y="21" width="150" height="10" class="progress-bg" />
+            <rect x="70" y="21" width="140" height="10" class="progress-bar" fill="#00a8ff" />
+            
+            <text x="0" y="30" font-size="12px" fill="#c9d1d9"></text>
+            <text x="0" y="50" font-size="12px" fill="#c9d1d9">VS Code</text>
+            <rect x="70" y="41" width="150" height="10" class="progress-bg" />
+            <rect x="70" y="41" width="120" height="10" class="progress-bar" fill="#a5d6ff" />
+        </g>
+    </g>
     </svg>"""
+
     with open("terminal.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
