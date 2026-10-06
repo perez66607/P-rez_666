@@ -21,9 +21,8 @@ jobs:
       - run: pip install -r scripts/requirements.txt
       - run: python scripts/fetch_contributions.py
       - run: python scripts/render_heatmap_svg.py
-      - run: python scripts/make_info_card.py
-      - run: python scripts/make_ascii_art.py
+      - run: python scripts/make_terminal.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg avi-ascii.svg"
+          file_pattern: "data/contributions.json contrib-heatmap.svg terminal.svg"
