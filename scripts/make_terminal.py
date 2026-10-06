@@ -1,5 +1,4 @@
 def create_terminal():
-    # Matriz de los tres "666" en píxeles rojos
     art_grid = [
         "         BB                               BB         ",
         "        BB                                 BB        ",
@@ -11,7 +10,6 @@ def create_terminal():
         "       BB     WW  WW   WW  WW   WW  WW      BB       ",
         "       BB     WW  WW   WW  WW   WW  WW      BB       ",
         "       BB      WWWWW    WWWWW    WWWWW      BB       ",
-        "       BB                                   BB       ",
         "       BB                                   BB       ",
         "        BB                                 BB        ",
         "         BB                               BB         "
@@ -93,7 +91,7 @@ def create_terminal():
         {pixels_svg}
     </g>
 
-    <!-- Consola limpia y sin superposiciones -->
+    <!-- Consola centrada en desarrollo web -->
     <g class="text" transform="translate(295, 75)">
         <foreignObject x="0" y="0" width="450" height="25">
             <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14px;">
