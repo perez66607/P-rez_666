@@ -179,22 +179,18 @@
 <rect x="75" y="135" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="255" y="135" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="260" y="135" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="70" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="75" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
+<rect x="80" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
+<rect x="250" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="255" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="260" y="140" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="75" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="80" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
+<rect x="85" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
+<rect x="245" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 <rect x="250" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="255" y="145" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="80" y="150" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="85" y="150" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="245" y="150" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
-<rect x="250" y="150" width="5.5" height="5.5" fill="#00a8ff" rx="1"/>
 
     </g>
 
-    <!-- Consola limpia y sin superposiciones -->
+    <!-- Consola centrada en desarrollo web -->
     <g class="text" transform="translate(295, 75)">
         <foreignObject x="0" y="0" width="450" height="25">
             <div xmlns="http://www.w3.org/1999/xhtml" class="text typing-container" style="color: #c9d1d9; font-size: 14px;">
