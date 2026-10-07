@@ -2,6 +2,12 @@
   <img src="./banner.svg" width="100%" alt="perez66607 - Web Developer" />
 </div>
 
+<div align="center">
+  <a href="https://perez66607.github.io/web_contacto_demo/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Ver_Demo_de_Proyecto_Web-00a8ff?style=for-the-badge&logoColor=white" alt="Web Demo">
+  </a>
+</div>
+
 <p align="center">
   <a href="https://github.com/perez66607">
     <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=3200&pause=1100&color=58A6FF&center=true&vCenter=true&width=640&height=40&lines=Construyo+interfaces+limpias+y+r%C3%A1pidas;Automatizo+lo+repetitivo+con+Python;Del+primer+commit+al+deploy%2C+sin+fricci%C3%B3n;Abierto+a+nuevos+proyectos+%F0%9F%9A%80" alt="Typing animation" />
